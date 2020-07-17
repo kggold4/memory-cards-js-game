@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- meta settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- title -->
+    <title>Memorey Game</title>
+
+    <!-- javascript -->
+    <script src="mainJS.js"></script>
+    <script src="cardFactory.js"></script>
+    <script src="game.js"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="mainCSS.css">
+
+    <!-- title icon -->
+    <link rel="shortcut icon" href="cards/0.png" type="image/x-icon">
+</head>
+
+<body onload="getDOMs();start();">
+    
+    <head>
+        <input onchange="changeLimit()" type="range" id="range" min="4" max="24">
+        found:
+        <span id="limitOutput"></span>/<span id="scoreOutput">0</span>
+        ,clicks:
+        <span id="clicks">0</span>
+        <div class="paddup">
+            <input type="button" value="play" id="play" onclick="play();">
+            <div class="paddup" id="win"></div>
+        </div>
+    </head>
+
+    <main id="main">
+        <script>
+
+            function panel() {
+                let output = "";
+                let temp = [];
+                for(var i in randomalCards) {
+                    let type = 8;
+                    let is = false;
+                    for(var j in temp) {
+                        if(temp[j] == randomalCards[i].id) {
+                            is = true;
+                            break;
+                        }
+                    }
+                    if(!is) {
+                        type = 8;
+                    } else {
+                        type = 9;
+                    }
+                    
+                    temp.push(randomalCards[i].id);
+                    output += "<img id='" + type + (randomalCards[i].id * 10) + "' onclick='select(" + type + "," + randomalCards[i].id + ");' src='cards/0.png'>";
+                }
+                main.innerHTML = output;
+            }
+            
+        </script>
+    </main>
+
+</body>
+
+</html>
