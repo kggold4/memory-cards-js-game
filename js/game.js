@@ -1,8 +1,28 @@
-//when selecting cards in game
+// player score
+let score = 0;
+
+// clicks counter
+let clickCount = 0;
+
+// store cards when selecting cards in game
 let selectionCardsId = [];
 let selectionCardsFullId = [];
 let selectionCardsType = [];
 
+// add 2 to score
+function scoreCount() {
+    score += 2;
+    scoreOutput.innerHTML = score;
+    if(score == limit) win.innerHTML = "win!";
+}
+
+// add 1 to clicks
+function click() {
+    clickCount++;
+    clicks.innerHTML = clickCount;
+}
+
+// selecting a card
 function select(type, id) {
 
     click();
@@ -31,6 +51,7 @@ function select(type, id) {
     }
 }
 
+// get full id of a card
 function idCard(type, id) {
     var mul = 0;
 
@@ -45,19 +66,14 @@ function idCard(type, id) {
     return cardId = mul + (id * 10);
 }
 
-//clear the selecting
-function clearSelectingCards() {
-    selectionCardsId = [];
-    selectionCardsFullId = [];
-    selectionCardsType = [];
-}
-
+// lock the selected card
 function lockCard(cardId, id) {
     id++;
     document.getElementById(cardId).src = "cards/" + id + ".png";
     document.getElementById(cardId).onclick = "";
 }
 
+// release selected card
 function releaseCard(cardId, id, type) {
     setTimeout(function() {
         document.getElementById(cardId).src = "cards/0.png";
@@ -67,21 +83,15 @@ function releaseCard(cardId, id, type) {
     }, 1000);
 }
 
+// clear the selected card
+function clearSelectingCards() {
+    selectionCardsId = [];
+    selectionCardsFullId = [];
+    selectionCardsType = [];
+}
+
+// found card
 function foundCards(cardId) {
     document.getElementById(cardId).onclick = "";
     document.getElementById(cardId).style.background = "#a8def0";
-}
-
-//calculate score
-let score = 0;
-function scoreCount() {
-    score += 2;
-    scoreOutput.innerHTML = score;
-    if(score == limit) win.innerHTML = "win!";
-}
-
-let clickCount = 0;
-function click() {
-    clickCount++;
-    clicks.innerHTML = clickCount;
 }

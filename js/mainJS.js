@@ -1,10 +1,10 @@
-//stating game
+// stating game
 function start() {
     getDOMs();
     changeLimit();
 }
 
-//getting html elements
+// getting html elements
 function getDOMs() {
     const win = document.getElementById("win");
     const main = document.getElementById("main");

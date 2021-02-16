@@ -1,15 +1,18 @@
-//**generate cards**
+// cards
 let cards = [];
 let randomalCards;
+
+// cards counter by limit range
 let idCount = 0;
 
+// string variables
 let path = "cards/"
 let format = ".png";
 
-//card object class
+// card object class
 class Card {
 
-    //card constructor
+    // card constructor
     constructor() {
         if(idCount == limit / 2) idCount = 0;
         this.id = idCount;
@@ -20,7 +23,7 @@ class Card {
     }
 }
 
-//generate cards function
+// generate cards function
 function generate() {
     var n = limit;
     while(n != 0) {
@@ -30,17 +33,17 @@ function generate() {
     randomalCards = cards.sort(randomal);
 }
 
-//ordering cards in random
-function randomal(a, b) {
+// ordering cards in random
+function randomal() {
     return 0.5 - Math.random();
 }
 
-//add to cards
+// add card to cards
 function add(card) {
     cards.push(card);
 }
 
-//clear all cards
+// clear all cards
 function clear() {
     cards = [];
     randomalCards = [];
