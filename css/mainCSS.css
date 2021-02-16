@@ -1,0 +1,60 @@
+:root {
+    --blueA: #589fb7;
+    --blueB: #225082;
+    --blueC: #a8def0;
+    --blueD: #e8f7fc;
+}
+
+* {
+    transition: 200ms;
+    text-align: center;
+    font-family: Segoe ui;
+}
+
+main {
+    padding: 50px 20%;
+}
+
+main > img {
+    padding: 2px;
+    margin: 10px;
+    border: 2px solid var(--blueA);
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+main > img:hover {
+    background: var(--blueD);
+}
+
+.paddup {
+    padding-top: 10px;
+}
+
+#play {
+    background-color: white;
+    padding: 0.5rem 1rem;
+    color: var(--blueB);
+    font-size: 1rem;
+    font-weight: bold;
+    border: solid 2px var(--blueB);
+    border-radius: 3px;
+}
+
+#play:hover {
+    background-color: var(--blueC);
+    cursor: pointer;
+    color: black;
+}
+
+#play:active {
+    background: white;
+    color: var(--blueA);
+}
+
+#win {
+    color: green;
+    font-weight: bold;
+}
