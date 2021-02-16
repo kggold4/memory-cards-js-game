@@ -4,6 +4,12 @@ Memory card game build with pure JavaScript, CSS and HTML, using oop, and simple
 
 In the game you are choosing a number of cards 4-24, and then the cards are randomly oredered on the game panel.
 
+## See how I build this project in youtube video:
+
+<p align="center">
+    <a href="https://www.youtube.com/watch?v=o9RqpBvPfqA"><img src="https://img.youtube.com/vi/o9RqpBvPfqA/0.jpg"></a>
+</p>
+
 ## Choose number of cards:
 
 <p align="center">
