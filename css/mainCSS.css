@@ -69,6 +69,8 @@ main > img:active {
 }
 
 #win {
-    color: green;
+    color: var(--blueB);
     font-weight: bold;
+    font-style: italic;
+    font-size: 3rem;
 }

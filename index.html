@@ -23,11 +23,9 @@
 
 <body onload="start();">
     
+    <!-- header -->
     <head>
-        <div class="paddup">
-            <input onchange="changeLimit()" type="range" id="range" min="4" max="24">
-        </div>
-
+    
         <div class="paddup">
             cards found:
             <span id="limitOutput"></span>/<span id="scoreOutput">0</span>
@@ -35,14 +33,18 @@
             <span id="clicks">0</span>
         </div>
 
-        
+        <div class="paddup">
+            <input onchange="changeLimit()" type="range" id="range" min="4" max="24">
+        </div>
 
         <div class="paddup">
             <input type="button" value="play" id="play" onclick="play();">
-            <div class="paddup" id="win"></div>
         </div>
+
+        <div id="win"></div>
     </head>
 
+    <!-- main -->
     <main id="main">
         <script>
 
