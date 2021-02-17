@@ -37,3 +37,27 @@ function play() {
     generate();
     panel();
 }
+
+function panel() {
+    let output = "";
+    let temp = [];
+    for(var i in randomalCards) {
+        let type = 8;
+        let is = false;
+        for(var j in temp) {
+            if(temp[j] == randomalCards[i].id) {
+                is = true;
+                break;
+            }
+        }
+        if(!is) {
+            type = 8;
+        } else {
+            type = 9;
+        }
+        
+        temp.push(randomalCards[i].id);
+        output += "<img id='" + type + (randomalCards[i].id * 10) + "' onclick='select(" + type + "," + randomalCards[i].id + ");' src='cards/0.png'>";
+    }
+    main.innerHTML = output;
+}

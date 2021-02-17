@@ -24,7 +24,7 @@
 <body onload="start();">
     
     <!-- header -->
-    <head>
+    <header>
     
         <div class="paddup">
             cards found:
@@ -42,38 +42,20 @@
         </div>
 
         <div id="win"></div>
-    </head>
+    </header>
 
     <!-- main -->
-    <main id="main">
-        <script>
+    <main id="main"></main>
 
-            function panel() {
-                let output = "";
-                let temp = [];
-                for(var i in randomalCards) {
-                    let type = 8;
-                    let is = false;
-                    for(var j in temp) {
-                        if(temp[j] == randomalCards[i].id) {
-                            is = true;
-                            break;
-                        }
-                    }
-                    if(!is) {
-                        type = 8;
-                    } else {
-                        type = 9;
-                    }
-                    
-                    temp.push(randomalCards[i].id);
-                    output += "<img id='" + type + (randomalCards[i].id * 10) + "' onclick='select(" + type + "," + randomalCards[i].id + ");' src='cards/0.png'>";
-                }
-                main.innerHTML = output;
-            }
-            
-        </script>
-    </main>
+    <!-- footer -->
+    <footer>
+        <a href="https://github.com/kggold4/memory-cards-js-game.git" target="_blank">
+            <img src="images/git.png" alt="git project">
+        </a>
+        <a href="https://www.youtube.com/watch?v=o9RqpBvPfqA" target="_blank">
+            <img src="images/youtube.png" alt="git youtube">
+        </a>
+    </footer>
 
 </body>
 
