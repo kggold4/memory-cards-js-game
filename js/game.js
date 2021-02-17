@@ -34,7 +34,7 @@ function select(type, id) {
     selectionCardsFullId.push(cardId);
     selectionCardsType.push(type);
 
-    //found
+    // found card (match)
     if(selectionCardsId.length == 2 && selectionCardsId[0] == selectionCardsId[1]) {
         for(var i in selectionCardsFullId) {
             foundCards(selectionCardsFullId[i]);
@@ -42,7 +42,7 @@ function select(type, id) {
         scoreCount();
         clearSelectingCards();
 
-    // not found
+    // not found card
     } else if(selectionCardsId.length == 2) {
         for(var i = 0; i < 2; i++) {
             releaseCard(selectionCardsFullId[i], selectionCardsId[i], selectionCardsType[i]);

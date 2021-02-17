@@ -26,14 +26,25 @@ main > img {
     height: 150px;
     cursor: pointer;
     border-radius: 20px;
+    opacity: 0.95;
 }
 
 main > img:hover {
     background: var(--blueD);
+    opacity: 1.0;
+}
+
+main > img:active {
+    border: 2px solid black;
 }
 
 .paddup {
     padding-top: 10px;
+    opacity: 0.5;
+}
+
+.paddup:hover {
+    opacity: 1.0;
 }
 
 #play {
