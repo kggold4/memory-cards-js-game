@@ -7,6 +7,9 @@
 
 * {
     transition: 200ms;
+    -o-transition: 200ms;
+    -moz-transition: 200ms;
+    -webkit-transition: 200ms;
     text-align: center;
     font-family: segoe ui;
 }
