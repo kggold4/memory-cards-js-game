@@ -38,6 +38,7 @@ function play() {
     panel();
 }
 
+// display the cards on main
 function panel() {
     let output = "";
     let temp = [];
