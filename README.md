@@ -1,8 +1,12 @@
-# <i>Memory-card-game</i>
+# <i>Memory-cards-js-game</i>
 
-Memory card game build with pure JavaScript, CSS and HTML, using oop, and simple code.
+Memory card game build with pure JavaScript, CSS and HTML, using Object-Oriented programming, and simple code.
 
 In the game you are choosing a number of cards 4-24, and then the cards are randomly oredered on the game panel.
+
+## Play the game online:
+
+[memory-cards-js-game online](https://kggold4.github.io/memory-cards-js-game/)
 
 ## See how I build this project in youtube video:
 
