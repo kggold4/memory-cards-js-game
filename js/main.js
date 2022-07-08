@@ -8,6 +8,7 @@ function start() {
 function getDOMs() {
     const win = document.getElementById("win");
     const main = document.getElementById("main");
+    const play = document.getElementById("play");
     const range = document.getElementById("range");
     const clicks = document.getElementById("clicks");
     const limitOutput = document.getElementById("limitOutput");
@@ -27,7 +28,10 @@ function changeLimit() {
 }
 
 // play game
-function play() {
+function play_game() {
+    play.value = "Play";
+    play.style.opacity = "0.5";
+    main.style.opacity = "1.0";
     score = -2;
     scoreCount();
     clickCount = -1;

@@ -64,6 +64,7 @@ main > img:active {
     font-weight: bold;
     border: solid 2px var(--blueB);
     border-radius: 3px;
+    margin-top: 15px;
 }
 
 /* play button hover */
@@ -71,6 +72,7 @@ main > img:active {
     background-color: var(--blueC);
     cursor: pointer;
     color: black;
+    opacity: 1.0;
 }
 
 /* play button active */

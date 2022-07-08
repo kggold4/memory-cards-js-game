@@ -13,7 +13,15 @@ let selectionCardsType = [];
 function scoreCount() {
     score += 2;
     scoreOutput.innerHTML = score;
-    if(score == limit) win.innerHTML = "win!";
+    if(score == limit) win_game();
+}
+
+// win the game
+function win_game() {
+    win.innerHTML = "Win!";
+    main.style.opacity = "0.5";
+    play.style.opacity = "1.0";
+    play.value = "Play again";
 }
 
 // add 1 to clicks
